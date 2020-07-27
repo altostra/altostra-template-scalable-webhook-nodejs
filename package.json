@@ -1,0 +1,19 @@
+{
+  "name": "altostra-template-scalable-webhook",
+  "version": "1.0.0",
+  "description": "Altostra Scalable Webhook template example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altostra/altostra-template-scalable-webhook.git"
+  },
+  "author": "Yossi Ittach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altostra/altostra-template-scalable-webhook/issues"
+  },
+  "homepage": "https://github.com/altostra/altostra-template-scalable-webhook#readme"
+}
