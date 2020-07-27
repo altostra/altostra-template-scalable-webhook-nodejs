@@ -127,8 +127,9 @@
 				"RequestsVerifier01": {
 					"entryPoint": "functions/requestsVerifier.handler",
 					"id": "RequestsVerifier01",
+					"layers": [],
 					"memory": 512,
-					"name": "requests-verifier",
+					"name": "requests-enqueuer",
 					"runtime": "nodejs12.x",
 					"timeout": 6,
 					"type": "resource.compute.function"

@@ -1,5 +1,5 @@
+const util = require('util')
+
 module.exports.handler = async (event, context) => {
-  return {
-      statusCode: 200
-  }
+  console.log(`Received SQS event: ${util.inspect(event)}`)
 }
