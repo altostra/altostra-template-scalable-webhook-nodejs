@@ -42,23 +42,23 @@
 				"designer": {
 					"resourcePositions": {
 						"ApiGateway01": {
-							"x": -139,
-							"y": 370,
+							"x": -127,
+							"y": 320,
 							"z": 0
 						},
 						"RequestsProcessor01": {
-							"x": 576,
-							"y": 403,
+							"x": 210,
+							"y": 542,
 							"z": 0
 						},
 						"RequestsQueue01": {
-							"x": 354,
-							"y": 403,
+							"x": 174,
+							"y": 474,
 							"z": 0
 						},
 						"RequestsTable01": {
-							"x": 824,
-							"y": 403,
+							"x": 281,
+							"y": 611,
 							"z": 0
 						},
 						"RequestsVerifier01": {
