@@ -4,7 +4,17 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 
 const REQ_TABLE = process.env.TABLE_REQUESTSTABLE01
 
-async function writeMessageToTable(msg) {
+async function updateUserProductsByEmailId(emailId) {
+
+  console.info(`Updating user products for email: ${emailId}`)
+  //Update all the user-specific products as seen
+  return
+
+}
+
+async function logMessageToTable(msg) {
+
+  console.log(`Logging email event to DynamoDB`)
 
   const params = {
     TableName: REQ_TABLE,
@@ -17,7 +27,7 @@ async function writeMessageToTable(msg) {
 
   try {
     const data = await docClient.put(params).promise();
-    console.log("Added item:", JSON.stringify(data, null, 2));
+    console.log("Added item");
   } catch (err) {
     console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
   }
@@ -28,5 +38,7 @@ module.exports.handler = async (event, context) => {
   console.log(`Received SQS event: ${util.inspect(event)}`)
 
   const msg = JSON.parse(event.Records[0].body)
-  await writeMessageToTable(msg)
+  await updateUserProductsByEmailId(msg.emailId)
+  await logMessageToTable(msg)
+
 }

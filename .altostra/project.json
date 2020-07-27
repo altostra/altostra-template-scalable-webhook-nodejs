@@ -42,8 +42,8 @@
 				"designer": {
 					"resourcePositions": {
 						"ApiGateway01": {
-							"x": -127,
-							"y": 320,
+							"x": 82,
+							"y": 307,
 							"z": 0
 						},
 						"RequestsProcessor01": {
