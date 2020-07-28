@@ -11,7 +11,7 @@ Let's say you're a developer working in a marketing company with a loyal cliente
 You need to:
 1. Verify that the call is authentic and not fake (quite fast), and
 2. Mark the specific products in the email as "viewed" by the customer using an internal RDS DB
-3. Keep the email statistics for farther processing by the marketing team
+3. Keep the email statistics for further processing by the marketing team
 
 The basic solution is simple: Connect an API Gateway route to a Lambda function, validate the message, marks the email as read in your RDS DB, and save it to a high volume DynamoDb. This should work, no?
 
@@ -65,4 +65,3 @@ So to sum it all up, our solution makes sure that when we receive a high volume 
 Other considerations to remember:
 1. **Some messages might be processed more than once** - SQS regular queue (unlike the FIFO SQS) promises that all the messages would be processed **at least** once - So you would need to make sure that your functions are idempotent.
 2. **SQS queues has a limit of 120,000 in-flight messages** (Received and not yet removed). If you think your buffer needs to be larger, you should consider splitting the messages between queues or switching to Kinesis (We'll touch that in a future post)
-
