@@ -23,7 +23,7 @@ The second point is your DB. If you're working with a good old RDS DB, you know 
 
 The third point is your other services - if your lambda needs to do anything that requires any external service, you'll need to make sure that this other service is capable of coping with your incoming request rates - and sometimes that's just ain’t possible, in cases where you're using services which limit query/minute rates.
 
-So, what we need is a way to save all the data that arrives, and process it in our desired rate. That's right, we need a Queue. But not only do we need a queue, we also need to limit the concurrency level of our executing lambda so we won't kill our DB or other services (we'll just be pushing our problem downstream)
+So, what we need is a way to save all the data that arrives, and process it in our desired rate. That's right, we need a Queue. But not only do we need a queue, we also need to limit the concurrency level of our executing Lambda so we won't kill our DB or other services (we'll just be pushing our problem downstream)
 
 ## Solution Outline
 
