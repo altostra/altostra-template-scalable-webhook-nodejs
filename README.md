@@ -55,7 +55,7 @@ Go to the `Processor` function -> Advanced -> Concurrency, and set it to 3.
 
 Setting the `Concurrency` does 2 things:
 1. Reserves a quota of 3 instances for this Lambda function, so it will never get starved by other lambdas (like the enqueue lambda, for example)
-2. Makes sure that no more than 3 instances of this lambda are running at the same time.
+2. Makes sure that no more than 3 instances of this Lambda are running at the same time.
 
 So to sum it all up, our solution makes sure that when we receive a high volume of concurrent requests:
 1. We don't lose any because we will write them all to the SQS queue
