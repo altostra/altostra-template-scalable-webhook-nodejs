@@ -17,7 +17,7 @@ The basic solution is simple: Connect an API Gateway route to a Lambda function,
 
 You probably already figured out that this sunny day scenario is not going to last long - actually, it will probably fail in the first high-traffic peak.
 
-First, there's the too-easy-to-forget AWS Concurrent executions limit - this means that you can have at most ~1,000 lambdas running at the same time in the same region (for **all** your Lambda functions, not 1000 per function). This means that if you'll have a sudden peak in requests (e.g, everybody opened their emails first thing Monday morning) - you're busted, and you're losing data.
+First, there's the too-easy-to-forget AWS Concurrent executions limit - this means that, by default, you can have at most ~1,000 lambda instances running at the same time in the same region (you can request an increase to that limit, but there's always a limit). This means that if you'll have a sudden peak in requests (e.g, everybody opened their emails first thing Monday morning) - you're busted, and you're losing data.
 
 The second point is your DB. If you're working with a good old RDS DB, you know that writing to it takes a while - which means that your lambda takes longer to run, which means that even if the incoming requests rate is not that high, you're still likely to reach the concurrent execution limit - and in the process, load the DB so much that other, unrelated services might be also affected.
 
