@@ -6,7 +6,7 @@ Many of our customers at Altostra have been using some form or another of this p
 
 ## What are we trying to solve?
 
-Let's say you're a developer working in a marketing company with a loyal clientele of a few hundred thousand customers. You're keeping your happily engaged customers up-to-date with customized emails, and whenever an email is opened, clicked, or marked as spam, you get a call to your api address (the webhook) with the id of the email and the type of the event ("Clicked", "Opened", "Spam").
+Let's say you're a developer working in a marketing company with a loyal clientele of a few hundred thousand customers. You're keeping your happily engaged customers up-to-date with customized emails, and whenever an email is opened, clicked, or marked as spam, you get a call to your API address (the webhook) with the id of the email and the type of the event ("Clicked", "Opened", "Spam").
 
 You need to:
 1. Verify that the call is authentic and not fake (quite fast), and
