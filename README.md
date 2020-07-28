@@ -64,4 +64,4 @@ So to sum it all up, our solution makes sure that when we receive a high volume 
 
 Other considerations to remember:
 1. **Some messages might be processed more than once** - SQS regular queue (unlike the FIFO SQS) promises that all the messages would be processed **at least** once - So you would need to make sure that your functions are idempotent.
-2. **SQS queues has a limit of 120,000 in-flight messages** (Received and not yet removed). If you think your buffer needs to be larger, you should consider splitting the messages between queues or switching to Kinesis (We'll touch that in a future post)
+2. **SQS queues have a limit of 120,000 in-flight messages** (Received and not yet removed). If you think your buffer needs to be larger, you should consider splitting the messages between queues or switching to Kinesis (We'll touch that in a future post)
