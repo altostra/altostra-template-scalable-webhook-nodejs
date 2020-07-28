@@ -42,28 +42,28 @@
 				"designer": {
 					"resourcePositions": {
 						"ApiGateway01": {
-							"x": 82,
-							"y": 307,
+							"x": -125,
+							"y": 371,
 							"z": 0
 						},
 						"RequestsProcessor01": {
-							"x": 210,
-							"y": 542,
+							"x": 255,
+							"y": 532,
 							"z": 0
 						},
 						"RequestsQueue01": {
-							"x": 174,
-							"y": 474,
+							"x": 177,
+							"y": 467,
 							"z": 0
 						},
 						"RequestsTable01": {
-							"x": 281,
-							"y": 611,
+							"x": 353,
+							"y": 593,
 							"z": 0
 						},
 						"RequestsVerifier01": {
-							"x": 121,
-							"y": 403,
+							"x": 114,
+							"y": 404,
 							"z": 0
 						}
 					}
