@@ -49,7 +49,7 @@ The sample code for the `processor` function
 
 Once we have all these resources in place, the only thing we're missing is to limit the amount of concurrently running instances of the `Processor` Lambda function:
 
-Go to the `Processor` function -> Advanced -> Concurrency, and set it to 3.
+We edit the `Processor` function, then go to -> Advanced -> Concurrency, and set it to 3.
 
 ![Function Concurrency](./resources/concurrencyDialog.jpeg)
 
