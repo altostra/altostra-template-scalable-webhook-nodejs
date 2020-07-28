@@ -13,7 +13,7 @@ You need to:
 2. Mark the specific products in the email as "viewed" by the customer using an internal RDS DB
 3. Keep the email statistics for further processing by the marketing team
 
-The basic solution is simple: Connect an API Gateway route to a Lambda function, validate the message, marks the email as read in your RDS DB, and save it to a high volume DynamoDb. This should work, no?
+The basic solution is simple: Connect an API Gateway route to a Lambda function, validate the message, mark the email as read in your RDS DB, and save it to a high volume DynamoDb table. This should work, shouldn't it?
 
 You probably already figured out that this sunny day scenario is not going to last long - actually, it will probably fail in the first high-traffic peak.
 
