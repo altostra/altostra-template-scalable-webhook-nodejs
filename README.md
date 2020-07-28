@@ -19,7 +19,7 @@ You probably already figured out that this sunny day scenario is not going to la
 
 First, there's the too-easy-to-forget AWS Concurrent executions limit - this means that you can have at most ~1,000 lambdas running at the same time in the same region (for **all** your Lambda functions, not 1000 per function). This means that if you'll have a sudden peak in requests (e.g, everybody opened their emails first thing Monday morning) - you're busted, and you're losing data.
 
-The second point is your DB. If you're working with a good old RDS DB, you know that writing to it takes a while - which means that your lambda takes longer to run, which means that even if the incoming requests rate is not that high, you're still likely to reach the concurrent execution limit - and in the process, load the DB so much that other, unrelated services might be also affected.
+The second point is your DB. If you're working with a good old RDS DB, you know that writing to it takes a while - which means that your Lambda takes longer to run, which means that even if the incoming requests rate is not that high, you're still likely to reach the concurrent execution limit - and in the process, load the DB so much that other, unrelated services might be also affected.
 
 The third point is your other services - if your lambda needs to do anything that requires any external service, you'll need to make sure that this other service is capable of coping with your incoming request rates - and sometimes that's just ain’t possible, in cases where you're using services which limit query/minute rates.
 
