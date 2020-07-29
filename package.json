@@ -11,7 +11,7 @@
     "url": "git+https://github.com/altostra/altostra-template-scalable-webhook.git"
   },
   "author": "Yossi Ittach",
-  "license": "ISC",
+  "license": "See LICENSE",
   "bugs": {
     "url": "https://github.com/altostra/altostra-template-scalable-webhook/issues"
   },
