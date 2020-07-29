@@ -37,7 +37,7 @@ What we're going to use:
 
 This is how the Altostra Blueprint would look like:
 
-![Altostra Blueprint](../images/blog/scalable_webhook/blueprint_image.png)
+![Altostra Blueprint](./resources/blueprint_image.png)
 
 #### The sample code for the `enqueue` function
 ```typescript
@@ -141,7 +141,7 @@ Once we have all these resources in place, the only thing we're missing is to li
 
 We edit the `Processor` function, then go to -> Advanced -> Concurrency, and set it to 3.
 
-![Function Concurrency](../images/blog/scalable_webhook/concurrency_dialog.jpeg)
+![Function Concurrency](./resources/concurrency_dialog.jpeg)
 
 Setting the `Concurrency` does 2 things:
 
