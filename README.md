@@ -3,7 +3,7 @@
 Use this template to create a scalable webhook project.
 You can then change and extend it to fit your requirements.
 
-To learn more, check out this [blog post](https://www.altostra.com/blog/scalable-webhook).
+To learn more, read this [blog post](https://www.altostra.com/blog/scalable-webhook).
 
 ## Cloud Resources
 * REST-API
