@@ -21,7 +21,7 @@ npm i -g @altostra/cli
 ### 3. Connect an a AWS account 
 To connect an AWS account, click on Connect Cloud Account in [Web Console settings](https://app.altostra.com/settings).
 
-> If you don't wish to connect your account just yet, you can deploy to the [Playground](https://docs.altostra.com/reference/concepts/playground-environment) environment—in the tutorial below—that simulates the cloud without creating actual resources.
+> If you don't wish to connect your account just yet, you can deploy to the [Playground](https://docs.altostra.com/reference/concepts/playground-environment.html) environment—in the tutorial below—that simulates the cloud without creating actual resources.
 
 ## Using the template
 
@@ -37,7 +37,7 @@ alto init --template scalable-webhook-nodejs
 
 * Apply the template to an existing Altostra project from Visual Studio Code by going to the Altostra view in the main toolbar and clicking on `scalable-webhook-nodejs` in the templates list.
 
-## Deploy
+## Deploying the project
 
 Start by logging in from the Altostra CLI:
 ```sh
@@ -45,14 +45,14 @@ alto login
 ```
 
 >The deployment process is simple and involves a few commands.  
->For more information on each command refer to the [Altostra CLI documentation](https://docs.altostra.com/reference/CLI/altostra-cli).
+>For more information on each command refer to the [Altostra CLI documentation](https://docs.altostra.com/reference/CLI/altostra-cli.html).
 
-Create an [image](https://docs.altostra.com/howto/projects/deploy-project#create-a-project-image) of the project:
+Create an [image](https://docs.altostra.com/howto/projects/deploy-project#create-a-project-image.html) of the project:
 ```sh
 alto push v1.0
 ```
 
-Deploy the image as a new [deployment](https://docs.altostra.com/reference/concepts/project-deployment) named `main` in the `Dev` environment:
+Deploy the image as a new [deployment](https://docs.altostra.com/reference/concepts/project-deployment.html) named `main` in the `Dev` environment:
 ```sh
 alto deploy main:v1.0 --new Dev # omit "--new Dev" to update rather than create
 ```
