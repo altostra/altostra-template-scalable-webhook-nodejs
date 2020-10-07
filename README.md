@@ -47,7 +47,7 @@ alto login
 >The deployment process is simple and involves a few commands.  
 >For more information on each command refer to the [Altostra CLI documentation](https://docs.altostra.com/reference/CLI/altostra-cli.html).
 
-Create an [image](https://docs.altostra.com/howto/projects/deploy-project#create-a-project-image.html) of the project:
+Create an [image](https://docs.altostra.com/howto/projects/deploy-project.html#create-a-project-image) of the project:
 ```sh
 alto push v1.0
 ```
