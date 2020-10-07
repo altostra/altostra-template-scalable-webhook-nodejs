@@ -2,182 +2,83 @@
 
 Use this template to create a scalable webhook project.
 You can then change and extend it to fit your requirements.
+To learn more about the Scalable Webhook pattern and how to use it, read our [blog post](https://www.altostra.com/blog/scalable-webhook) on the subject.
 
-To learn more, read this [blog post](https://www.altostra.com/blog/scalable-webhook).
+## Before you begin
 
-## Getting started
+### 1. Create a free Altostra account
+To create an account, simply login to the [Altostra Web Console](https://app.altostra.com).
 
-## Things you'll need for this tutorial
-1. An Altostra Account (Don't have one yet? Just [login](https://app.altostra.com) here)
-1. Altostra CLI installed (`npm i -g @altostra/cli` or [see docs](https://docs.altostra.com/reference/CLI/altostra-cli.html#installation))
-1. Altostra Tools extension for Visual Studio Code ([VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) or [see docs](https://docs.altostra.com/getting-started/installation.html#install-the-visual-studio-code-extension))
-1. A connected AWS cloud account ( [Web Console settings](https://app.altostra.com/settings)  or [see docs](https://docs.altostra.com/getting-started/connect-your-accounts.html#connect-your-cloud-service-accounts))
-1. An Environment connected to your AWS Account ([Web Console environments](https://app.altostra.com/environments) or [see docs](https://docs.altostra.com/howto/envs/manage-environments.html)) - We'll call it `Dev` for brevity, but you can pick any of your environments
+### 2. Install the Altostra CLI
+```sh
+npm i -g @altostra/cli
+```
 
-To debug your function you'll also need to install SAM-CLI by following
-[its installation instructions](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html).
+### 3. Connect an a AWS account 
+To connect an account, use the [Web Console settings](https://app.altostra.com/settings).
 
+> If you don't wish to connect your account just yet, you can deploy to the [Playground](https://docs.altostra.com/reference/concepts/playground-environment) environment—in the tutorial below—that simulates the cloud without creating actual resources.
 
 ## Using the template
 
-You have several options to get started with this template.  
-Either go to the Altostra Web Console and create a new project.  
-When asked to use a template, select "static-website".
-
-Alternatively, you can use the Altostra CLI to initialize a new project from the template by running:
+You have several options to get started with this template:
+* Initialize a new project from the Altostra CLI and specify the template:
 ```sh
-$ alto init --template static-website
+mkdir scalable-webhook
+cd scalable-webhook
+alto init --template scalable-webhook-nodejs
 ```
 
-You can also apply the template to an existing Altostra project from Visual Studio Code by going
-to the Altostra view in the main toolbar and clickign on "static-website" in the templates list.
+* Create a new project from the [Altostra Web Console](https://app.altostra.com/projects), you can select the `scalable-webhook-nodejs` template from the list.
 
-### Project deployment
+* Apply the template to an existing Altostra project from Visual Studio Code by going to the Altostra view in the main toolbar and clicking on `scalable-webhook-nodejs` in the templates list.
 
-Run the following commands to create a deployment image of the project and deploy it as a new instance.
+## Deploy
 
-For more information on each command refer to the [Altostra CLI docs](https://docs.altostra.com/reference/CLI/altostra-cli.html).
-
-1. Create an
-[image](https://docs.altostra.com/howto/projects/deploy-project.html#create-a-project-image)
-from the project:
-```shell
-$ altos push v1.0
-```
-2. Deploy the image to a new deployment named `main` in the `Dev` environment:
-```shell
-$ alto deploy main:v1.0 --new Dev
-```
-3. Manage the project in the Altostra Web Console:
-```shell
-$ alto console
+Start by logging in from the Altostra CLI:
+```sh
+alto login
 ```
 
-> To update an existing deployment with new images just omit the `--new` flag and environment name:
-> ```shell
-> $ alto deploy main:v2.0
->```
+>The deployment process is simple and involves a few commands.  
+>For more information on each command refer to the [Altostra CLI documentation](https://docs.altostra.com/reference/CLI/altostra-cli).
 
-## Cloud Resources
+Create an [image](https://docs.altostra.com/howto/projects/deploy-project#create-a-project-image) of the project:
+```sh
+alto push v1.0
+```
+
+Deploy the image as a new [deployment](https://docs.altostra.com/reference/concepts/project-deployment) named `main` in the `Dev` environment:
+```sh
+alto deploy main:v1.0 --new Dev # omit "--new Dev" to update rather than create
+```
+
+## View the deployment status and details
+You have two options, list the deployment details in the terminal or open the Web Console.
+
+* Using the Altostra CLI:
+```sh
+alto deployments # list the deployments for the current project
+```
+```sh
+alto deployments main # show details for the deployment "main"
+```
+
+* Using the Web Console:
+```sh
+alto console # will open the Web Console for the current project
+```
+
+## Modifying the project
+To modify the project, you'll need to install the [Altostra Tools](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) extension for Visual Studio Code from the marketplace, or search for `Altostra Tools` in the VS Code extensions view.
+
+## Template content
+
+### Cloud resources
 * REST-API
 * Functions
 * Message Queue
 * Data Table
 
-## Source Files
-The sources are located in the `functions` directory.
-
-## Running and debugging
-
-To run the function locally you'll have to create a few resources by deploying the project, then:
-1. Run `alto build`
-1. Run `alto console`
-1. Select the deployment
-1. Click on the `Open in AWS Console` button of the latest version
-1. Go to the `Resources` tab
-1. Filter to `RequestsQueue01` and copy the *Physical ID* of the queue resource  
-For brevity, we assume it is `https://sqs.my-queue`.
-1. Filter to `RequestsTable01` and click on the *Physical ID* of the table resource
-1. Copy its *Table name*  
-For brevity, we assume it is called `RequestsTable01-1`.
-
-To debug the `requests-processor` function, create a message payload by running
-1. Run `sam local generate-event sqs receive-message > msg.json`
-1. Edit `msg.json` with your favorite text editor.
-
-### *Nix
-
-#### Running
-
-To run a local HTTP API that invokes the `requests-verifier` function run
-```shell
-QUEUE_REQUESTSQUEUE01="https://sqs.my-queue" sam local start-api -t sam-template.json
-```
-
-To run run the `requests-processor` function run
-```shell
-TABLE_REQUESTSTABLE01="RequestsTable01-1" sam local invoke -t sam-template.json \
---event msg.json RequestsProcessor01
-```
-
-#### Debugging
-To debug the `requests-verifier` function run
-```shell
-QUEUE_REQUESTSQUEUE01="https://sqs.my-queue" sam local start-api -t sam-template.json -d 5000
-```
-After every call to the API, the function would load then wait until a debugger
-would connect to `localhost:5000`.
-
-To debug the `requests-processor` function run
-```shell
-TABLE_REQUESTSTABLE01="RequestsTable01-1" sam local invoke -t sam-template.json \
---event msg.json RequestsProcessor01  -d 5000
-```
-
-The function would load and wait for a debugger to connect `localhost:5000`.
-
-### Windows PowerShell 
-
-#### Running
-
-To run a local HTTP API that invokes the `requests-verifier` function run
-```shell
-$ENV:QUEUE_REQUESTSQUEUE01="https://sqs.my-queue" 
-sam local start-api -t sam-template.json
-```
-
-To run run the `requests-processor` function run
-```shell
-$ENV:TABLE_REQUESTSTABLE01="RequestsTable01-1" 
-sam local invoke -t sam-template.json --event msg.json RequestsProcessor01
-```
-
-#### Debugging
-To debug the `requests-verifier` function run
-```shell
-$ENV:QUEUE_REQUESTSQUEUE01="https://sqs.my-queue" 
-sam local start-api -t sam-template.json -d 5000
-```
-After every call to the API, the function would load then wait until a debugger
-would connect to `localhost:5000`.
-
-To debug the `requests-processor` function run
-```shell
-$ENV:TABLE_REQUESTSTABLE01="RequestsTable01-1" 
-sam local invoke -t sam-template.json --event msg.json RequestsProcessor01 -d 5000
-```
-
-The function would load and wait for a debugger to connect `localhost:5000`.
-
-### Windows CMD
-
-#### Running
-
-To run a local HTTP API that invokes the `requests-verifier` function run
-```shell
-SET "QUEUE_REQUESTSQUEUE01=https://sqs.my-queue" 
-sam local start-api -t sam-template.json
-```
-
-To run run the `requests-processor` function run
-```shell
-SET "TABLE_REQUESTSTABLE01=RequestsTable01-1" 
-sam local invoke -t sam-template.json --event msg.json RequestsProcessor01
-```
-
-#### Debugging
-To debug the `requests-verifier` function run
-```shell
-SET "QUEUE_REQUESTSQUEUE01=https://sqs.my-queue" 
-sam local start-api -t sam-template.json -d 5000
-```
-After every call to the API, the function would load then wait until a debugger
-would connect to `localhost:5000`.
-
-To debug the `requests-processor` function run
-```shell
-SET "TABLE_REQUESTSTABLE01=RequestsTable01-1" 
-sam local invoke -t sam-template.json --event msg.json RequestsProcessor01 -d 5000
-```
-
-The function would load and wait for a debugger to connect `localhost:5000`.
+### Source files
+The source files are located in the `functions` directory.
