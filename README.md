@@ -1,7 +1,11 @@
-# Scalable Webhook Template
+# Scalable Webhook Template - NodeJS
 
-Use this template to create a scalable webhook project.
-You can then change and extend it to fit your requirements.
+This template implements the Scalable Webhook pattern, including the source code
+to get you started quickly. 
+
+After you create a project from this template, change and extend it to fit your 
+specific requirements.
+
 To learn more about the Scalable Webhook pattern and how to use it, read our [blog post](https://www.altostra.com/blog/scalable-webhook) on the subject.
 
 ## Before you begin
@@ -15,7 +19,7 @@ npm i -g @altostra/cli
 ```
 
 ### 3. Connect an a AWS account 
-To connect an account, use the [Web Console settings](https://app.altostra.com/settings).
+To connect an AWS account, click on Connect Cloud Account in [Web Console settings](https://app.altostra.com/settings).
 
 > If you don't wish to connect your account just yet, you can deploy to the [Playground](https://docs.altostra.com/reference/concepts/playground-environment) environment—in the tutorial below—that simulates the cloud without creating actual resources.
 
