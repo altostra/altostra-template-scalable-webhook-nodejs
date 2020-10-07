@@ -74,13 +74,16 @@ alto console # will open the Web Console for the current project
 ```
 
 ## Modifying the project
-To modify the project, you'll need to install the [Altostra Tools](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) extension for Visual Studio Code from the marketplace, or search for `Altostra Tools` in the VS Code extensions view.
+To modify the project, install the [Altostra Tools](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) extension for Visual Studio Code from the marketplace, or search for `Altostra Tools` in the VS Code extensions view.
+
+The extension adds a Altostra panel and visual additor that help you modify and 
+design the project infrastructure.
 
 ## Template content
 
 ### Cloud resources
 * REST-API
-* Functions
+* Functions (NodeJS runtime)
 * Message Queue
 * Data Table
 
