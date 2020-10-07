@@ -9,10 +9,10 @@ To learn more, read this [blog post](https://www.altostra.com/blog/scalable-webh
 
 ## Things you'll need for this tutorial
 1. An Altostra Account (Don't have one yet? Just [login](https://app.altostra.com) here)
-1. Altostra CLI installed (`npm i -g @altostra/cli` or [see docs](../reference/CLI/altostra-cli.html#installation))
-1. Altostra Tools extension for Visual Studio Code ([VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) or [see docs](../getting-started/installation.html#install-the-visual-studio-code-extension))
-1. A connected AWS cloud account ( [Web Console settings](https://app.altostra.com/settings)  or [see docs](../getting-started/connect-your-accounts.html#connect-your-cloud-service-accounts))
-1. An Environment connected to your AWS Account ([Web Console environments](https://app.altostra.com/environments) or [see docs](../howto/envs/manage-environments.html)) - We'll call it `Dev` for berevity, but you can pick any of your environments
+1. Altostra CLI installed (`npm i -g @altostra/cli` or [see docs](https://docs.altostra.com/reference/CLI/altostra-cli.html#installation))
+1. Altostra Tools extension for Visual Studio Code ([VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) or [see docs](https://docs.altostra.com/getting-started/installation.html#install-the-visual-studio-code-extension))
+1. A connected AWS cloud account ( [Web Console settings](https://app.altostra.com/settings)  or [see docs](https://docs.altostra.com/getting-started/connect-your-accounts.html#connect-your-cloud-service-accounts))
+1. An Environment connected to your AWS Account ([Web Console environments](https://app.altostra.com/environments) or [see docs](https://docs.altostra.com/howto/envs/manage-environments.html)) - We'll call it `Dev` for brevity, but you can pick any of your environments
 
 To debug your function you'll also need to install SAM-CLI by following
 [its installation instructions](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html).
