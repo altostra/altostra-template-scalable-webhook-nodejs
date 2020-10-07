@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "alto build",
-    "push": "alto push",
-    "deploy": "alto deploy"
+    "build": "alto build"
   },
   "author": "Altostra, Inc",
   "license": "See LICENSE"
