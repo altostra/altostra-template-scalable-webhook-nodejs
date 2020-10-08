@@ -4,16 +4,9 @@
   "description": "Altostra Scalable Webhook template example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "alto build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/altostra/altostra-template-scalable-webhook.git"
-  },
-  "author": "Yossi Ittach",
-  "license": "See LICENSE",
-  "bugs": {
-    "url": "https://github.com/altostra/altostra-template-scalable-webhook/issues"
-  },
-  "homepage": "https://github.com/altostra/altostra-template-scalable-webhook#readme"
+  "author": "Altostra, Inc",
+  "license": "See LICENSE"
 }

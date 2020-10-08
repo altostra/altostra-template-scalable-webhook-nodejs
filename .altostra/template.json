@@ -129,7 +129,7 @@
 					"id": "RequestsVerifier01",
 					"layers": [],
 					"memory": 512,
-					"name": "requests-enqueuer",
+					"name": "requests-verifier",
 					"runtime": "nodejs12.x",
 					"timeout": 6,
 					"type": "resource.compute.function"
