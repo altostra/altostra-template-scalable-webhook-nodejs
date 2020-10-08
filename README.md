@@ -1,9 +1,9 @@
 # Scalable Webhook Template - NodeJS
 
 This template implements the Scalable Webhook pattern, including the source code
-to get you started quickly. 
+to get you started quickly.
 
-After you create a project from this template, change and extend it to fit your 
+After you create a project from this template, change and extend it to fit your
 specific requirements.
 
 To learn more about the Scalable Webhook pattern and how to use it, read our [blog post](https://www.altostra.com/blog/scalable-webhook) on the subject.
@@ -18,7 +18,7 @@ To create an account, simply login to the [Altostra Web Console](https://app.alt
 npm i -g @altostra/cli
 ```
 
-### 3. Connect an a AWS account 
+### 3. Connect an a AWS account
 To connect an AWS account, click on Connect Cloud Account in [Web Console settings](https://app.altostra.com/settings).
 
 > If you don't wish to connect your account just yet, you can deploy to the [Playground](https://docs.altostra.com/reference/concepts/playground-environment.html) environment—in the tutorial below—that simulates the cloud without creating actual resources.
@@ -44,7 +44,7 @@ Start by logging in from the Altostra CLI:
 alto login
 ```
 
->The deployment process is simple and involves a few commands.  
+>The deployment process is simple and involves a few commands.
 >For more information on each command refer to the [Altostra CLI documentation](https://docs.altostra.com/reference/CLI/altostra-cli.html).
 
 Create an [image](https://docs.altostra.com/howto/projects/deploy-project.html#create-a-project-image) of the project:
@@ -52,7 +52,8 @@ Create an [image](https://docs.altostra.com/howto/projects/deploy-project.html#c
 alto push v1.0
 ```
 
-Deploy the image as a new [deployment](https://docs.altostra.com/reference/concepts/project-deployment.html) named `main` in the `Dev` environment:
+Deploy the image as a new
+[deployment](https://docs.altostra.com/reference/concepts/deployments.html) named `main` in the `Dev` environment:
 ```sh
 alto deploy main:v1.0 --new Dev # omit "--new Dev" to update rather than create
 ```
@@ -76,7 +77,7 @@ alto console # will open the Web Console for the current project
 ## Modifying the project
 To modify the project, install the [Altostra Tools](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) extension for Visual Studio Code from the marketplace, or search for `Altostra Tools` in the VS Code extensions view.
 
-The extension adds a Altostra panel and visual additor that help you modify and 
+The extension adds a Altostra panel and visual additor that help you modify and
 design the project infrastructure.
 
 ## Template content
