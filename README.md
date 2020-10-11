@@ -1,4 +1,4 @@
-# Scalable Webhook Template - NodeJS
+# Scalable Webhook Template - Node.js
 
 This template implements the Scalable Webhook pattern, including the source code
 to get you started quickly.
@@ -15,7 +15,8 @@ To create an account, simply login to the [Altostra Web Console](https://app.alt
 
 ### 2. Install the Altostra CLI
 ```sh
-npm i -g @altostra/cli
+# make sure you have Node.js 10 or above installed
+npm install -g @altostra/cli
 ```
 
 ### 3. Connect an a AWS account
@@ -75,16 +76,25 @@ alto console # will open the Web Console for the current project
 ```
 
 ## Modifying the project
-To modify the project, install the [Altostra Tools](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) extension for Visual Studio Code from the marketplace, or search for `Altostra Tools` in the VS Code extensions view.
+TTo modify the project, install [Altostra Tools](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra) for Visual Studio Code:
 
-The extension adds a Altostra panel and visual additor that help you modify and
+From the terminal:
+```sh
+code --install-extension Altostra.altostra
+```
+
+or, search for Altostra Tools in the Visual Studio Code extensions view.
+
+or, directly from the [marketplace](https://marketplace.visualstudio.com/items?itemName=Altostra.altostra).
+
+The extension adds an Altostra panel and visual additor that help you modify and
 design the project infrastructure.
 
 ## Template content
 
 ### Cloud resources
 * REST-API
-* Functions (NodeJS runtime)
+* Functions (Node.js runtime)
 * Message Queue
 * Data Table
 
