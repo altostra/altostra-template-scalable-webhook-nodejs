@@ -1,4 +1,5 @@
 {
+	"type": "altostra",
 	"id": "altostra-template-scalable-w-r0004r6",
 	"name": "altostra-template-scalable-webhook",
 	"description": "Template for a Scalable Webhook pattern",
