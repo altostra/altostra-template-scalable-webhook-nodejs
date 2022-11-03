@@ -103,7 +103,7 @@
 					"id": "RequestsProcessor01",
 					"memory": 512,
 					"name": "requests-processor",
-					"runtime": "nodejs12.x",
+					"runtime": "nodejs16.x",
 					"timeout": 6,
 					"type": "resource.compute.function"
 				},
@@ -132,7 +132,7 @@
 					"layers": [],
 					"memory": 512,
 					"name": "requests-verifier",
-					"runtime": "nodejs12.x",
+					"runtime": "nodejs16.x",
 					"timeout": 6,
 					"type": "resource.compute.function"
 				}
